@@ -1,0 +1,19 @@
+/* Document type colours: the icon chip beside a document and the background tint of its grid row. */
+.vi-t-I { --tc: #059669; }
+.vi-t-P { --tc: #d97706; }
+.vi-t-F { --tc: #7c3aed; }
+.vi-t-C { --tc: #dc2626; }
+.vi-t-D { --tc: #2563eb; }
+.vi-t-L { --tc: #db2777; }
+.vi-t-x { --tc: #64748b; }
+
+.vi-type { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.vi-type__ic {
+  width: 26px; height: 26px; border-radius: 8px; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--tc); background: color-mix(in srgb, var(--tc) 14%, transparent);
+}
+
+tr.vi-row > td { background: color-mix(in srgb, var(--tc) 7%, transparent); }
+/* The grid paints its own hover colour on the cells; keep the type colour, a little stronger. */
+tr.vi-row:hover > td { background: color-mix(in srgb, var(--tc) 13%, transparent) !important; }
